@@ -89,7 +89,7 @@ Given that an employee laptop is compromised: In the next 12 months, during the 
 Given that an employee laptop is compromised: In the next 12 months, during the course of a red team operation, the red team accessed information that could be greatly damaging to $COMPANY if released publicly and
 * it was detected in less than 66 hours. 
 * it was detected after 66 hours and in less than 7 days (without red team intentionally triggering detection). 
-the security team did not detect it, it was detected after 7 days or  red team intentionally triggered detection.
+* the security team did not detect it, it was detected after 7 days or  red team intentionally triggered detection.
 
 ## Scenario 8 - Production Detection
 Given a red team compromise on a randomized engineer laptop: The red team
@@ -113,8 +113,8 @@ Given a specialized Splunk hunt investigates the last 30 days of all Splunk logs
 
 ## Scenario 12 - Hunt Sev1/0
 Given a specialized CloudTrail hunt investigates the last 30 days of logs:
-$COMPANY will initiate a severity 0 or severity 1 incident related to the Cloudtrail logs. 
-$COMPANY will not initiate a severity 0 or severity 1 incident related to the Cloudtrail logs. 
+* $COMPANY will initiate a severity 0 or severity 1 incident related to the Cloudtrail logs. 
+* $COMPANY will not initiate a severity 0 or severity 1 incident related to the Cloudtrail logs. 
 
 ## Scenario 12 - Hunt Sev1/0
 In the next 12 months, an external communication*
