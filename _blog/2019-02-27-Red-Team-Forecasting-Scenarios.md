@@ -1,3 +1,7 @@
+---
+layout: post
+title: Red Team Forecast Scenarios
+---
 These are the forecast scenarios that I used internally at Atlassian to measure our security improvement over time. The inputs to concluding many of these forecasts come directly from the red team. This allows a quantifiable and measurable method of taking red team operation outputs and using them to show improvements in the security program. This demonstrates real value!
 
 This is based on [@magoo's] (https://twitter.com/magoo) work on [Risk Measurement](https://magoo.github.io/simple-risk/). 
