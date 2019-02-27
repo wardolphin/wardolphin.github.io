@@ -12,7 +12,7 @@ Each scenario also implies that the scenario will only conclude if the red team 
  
 For each scenario there are several provided outcomes. Each outcome should be given a probability. The probabilities must add up to 100. 
 
-For additional reading on how to get started, [this page] (https://magoo.github.io/simple-risk-analysis/) is helpful.
+For additional reading on how to get started, [this page](https://magoo.github.io/simple-risk-analysis/) is helpful.
 
 ## Scenario 1- compromised computer
 In the next 12 months, during the course of a red team operation, the red team:
