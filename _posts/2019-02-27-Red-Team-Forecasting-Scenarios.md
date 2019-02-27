@@ -4,9 +4,9 @@ title: Red Team Forecast Scenarios
 ---
 These are the forecast scenarios that I used internally at Atlassian to measure our security improvement over time. The inputs to concluding many of these forecasts come directly from the red team. This allows a quantifiable and measurable method of taking red team operation outputs and using them to show improvements in the security program. This demonstrates real value!
 
-This is based on [@magoo's] (https://twitter.com/magoo) work on [Risk Measurement](https://magoo.github.io/simple-risk/). 
+This is based on [@magoo's](https://twitter.com/magoo) work on [Risk Measurement](https://magoo.github.io/simple-risk/). 
 
-Forecasters make predictions every quarter predicting the likelihood of the events occuring in the next 12 months. Whenever a forecast concludes by one of the outcomes becoming “true” we calculate the forecasters [brier scores] (https://www.gjopen.com/faq), inform them of the outcome of the scenario and present them their results and brier score. 
+Forecasters make predictions every quarter predicting the likelihood of the events occuring in the next 12 months. Whenever a forecast concludes by one of the outcomes becoming “true” we calculate the forecasters [brier scores](https://www.gjopen.com/faq), inform them of the outcome of the scenario and present them their results and brier score. 
 
 Each scenario also implies that the scenario will only conclude if the red team attempts the action in question. Don’t score scenarios that were never attempted because it will affect brier scores. All of these are starter scenarios and shouldn’t be copypasta to your organization. You should adapt the questions and outcomes to the needs and goals that you are trying to achieve.
  
@@ -63,13 +63,13 @@ Given that an employee laptop is compromised: In the next 12 months, during the 
 * will compromise differing systems across significant trust boundaries
 * will not compromise differing systems across significant trust boundaries
 
-##Scenario 5 - Detection
+## Scenario 5 - Detection
 Given that an employee laptop is compromised: In the next 12 months, during the course of a red team operation, a compromise across significant trust boundaries*
 * was detected in less than 66 hours. 
 * was detected after 66 hours 
 * the security team did not detect it, it was detected after 7 days or  red team intentionally triggered detection.
 
-##Scenario 6 - Source Code Compromise
+## Scenario 6 - Source Code Compromise
 Given that an employee laptop is compromised: In the next 12 months, during the course of a red team operation, the red team
 * accessed full source code of one or more $COMPANY products. 
 * did not access source code of one or more $COMPANY products. 
@@ -91,7 +91,7 @@ Given that an employee laptop is compromised: In the next 12 months, during the 
 * it was detected after 66 hours and in less than 7 days (without red team intentionally triggering detection). 
 the security team did not detect it, it was detected after 7 days or  red team intentionally triggered detection.
 
-##Scenario 8 - Production Detection
+## Scenario 8 - Production Detection
 Given a red team compromise on a randomized engineer laptop: The red team
 * will observe production customer data in less than two weeks without detection. 
 * will not observe production customer data or will be detected in less than two weeks of the compromise. 
