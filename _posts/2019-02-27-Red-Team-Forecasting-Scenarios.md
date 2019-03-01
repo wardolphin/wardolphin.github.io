@@ -31,7 +31,7 @@ In the next 12 months, during the course of a red team operation, the red team
 * did not gain control of any employees corporate accounts.
 
 ## Scenario 2 - Detection
-In the next 12 months, during the course of a red team operation, the red team gained control of one or more atlassian employees corporate accounts and
+In the next 12 months, during the course of a red team operation, the red team gained control of one or more $COMPANY employees corporate accounts and
 * it was detected in less than 66 hours.
 * it was detected after 66 hours 
 * it was not detected, it was detected after 7 days or red team intentionally triggered detection.
