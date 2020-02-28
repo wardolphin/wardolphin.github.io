@@ -1,4 +1,5 @@
 name: wardolphin
 markdown: kramdown
 theme: jekyll-theme-minimal
+logo: ./logo.png
 project_tagline: https://wardolphin.party/blog/
