@@ -1,2 +1,2 @@
 # wardolphin.github.io
-blog
+https://wardolphin.party/blog
