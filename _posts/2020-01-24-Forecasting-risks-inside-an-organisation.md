@@ -127,7 +127,7 @@ Because the scenarios that were forecasted have met one of the possible outcomes
 
   
 
-*The Brier score is the squared error of a probabilistic forecast. To calculate it, we divide the forecast by 100 so that probabilities range between 0 (0%) and 1 (100%). Then, we code reality as either 0 (if the event did not happen) or 1 (if the event did happen). For each answer option, we take the difference between the forecast and the correct answer, square the differences, and add them all together.
+> **_NOTE:_** The Brier score is the squared error of a probabilistic forecast. To calculate it, we divide the forecast by 100 so that probabilities range between 0 (0%) and 1 (100%). Then, we code reality as either 0 (if the event did not happen) or 1 (if the event did happen). For each answer option, we take the difference between the forecast and the correct answer, square the differences, and add them all together.
 
   
 
