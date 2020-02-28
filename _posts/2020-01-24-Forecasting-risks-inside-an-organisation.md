@@ -10,7 +10,7 @@ title: Forecasting Risk inside an Organization
         * [Scenario 1 Round 1  ](#scenario-1-round-1)
         * [Scenario 2 Round 1  ](#scenario-2-round-1)
         * [Forecast Prediction Summary  ](#forecast-prediction-summary)
-     * [Step 2: Execute operations or wait for scenarios to occur/timeout ](#step-2-execute-operations-or-wait-for-scenarios-to-occur-timeout)
+     * [Step 2: Execute operations or wait for scenarios to occur/timeout ](#step-2-execute-operations-or-wait-for-scenarios-to-occur/timeout)
     * [Step 3: Conclude and score forecasts  ](#step-3-conclude-and-score-forecasts)
     * [Learning Points: Scenario Design  ](#learning-points-scenario-design)
   * [How do you measure improvement over time?  ](#how-do-you-measure-improvement-over-time)
@@ -145,6 +145,7 @@ Brier score calculation:
 (1-.8938)^2 + (0-.1063)^2 = 0.02257813
 
 Close to 0, this is an accurate forecast by the panel!
+
 | Scenario           | A (Detects <48 hours) | B (Detects 1d - 7d) | C (No detection or > 7d)  |
 |--------------------|-----------------------|---------------------|---------------------------|
 | Panel Prediction % | 34.38                 | 44.38               | 21.25                     |
