@@ -2,9 +2,9 @@
 layout: post
 title: Forecasting Risk inside an Organization
 ---
-[How can a red team help risk measurement?  1]()
+[How can a red team help risk measurement?  1](#how-can-a-red-team-help-risk-measurement)
 
-[How did we use forecasting to measure uncertainty?  2](#How-did-we-use-forecasting-to-measure-uncertainty?)
+[How did we use forecasting to measure uncertainty?  2](#how-did-we-use-forecasting-to-measure-uncertainty)
 
 [What does it look like in practice?  2]()
 
