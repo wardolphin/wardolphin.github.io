@@ -2,45 +2,27 @@
 layout: post
 title: Forecasting Risk inside an Organization
 ---
-* [How can a red team help risk measurement?  1](#how-can-a-red-team-help-risk-measurement)
 
- * [How did we use forecasting to measure uncertainty?  2](#how-did-we-use-forecasting-to-measure-uncertainty)
-
- * [What does it look like in practice?  2](#what-does-it-look-like-in-practice)
-
-  * [Step 1: Take the predictions  3](#step-1-take-the-predictions)
-
-   * [Scenario 1 Round 1  3](#scenario-1-round-1)
-
-   * [Scenario 2 Round 1  3](#scenario-2-round-1)
-
-   * [Forecast Prediction Summary  4](#forecast-prediction-summary)
-
-  * [Step 2: Execute operations or wait for scenarios to occur/timeout  4](#step-2-execute-operations-or-wait-for-scenarios-to-occur-timeout)
-
-  * [Step 3: Conclude and score forecasts  4](#step-3-conclude-and-score-forecasts)
-
-  * [Learning Points: Scenario Design  5](#learning-points-scenario-design)
-
- * [How do you measure improvement over time?  6](#how-do-you-measure-improvement-over-time)
-
-  * [Step 4: Implement improvements and new controls  6](#step-4-implement-improvements-and-new-controls)
-
-  * [Step 5: Forecast again  6](#step-5-forecast-again)
-
-   * [Scenario 1 Round 2  6](#scenario-1-round-2)
-
-   * [Visualizing the prediction  7](#visualizing-the-prediction)
-
-   * [Scenario 2 Round 2  7](#scenario-2-round-2)
-
-   * [Visualizing the prediction  8](#visualizing-the-prediction)
-
-  * [Step 6: Calculate Accuracy  9](#step-6-calculate-accuracy)
-
-  * [Learning Points: Accuracy  9](#learning-points-accuracy)
-
- * [Conclusion  10](#conclusion)
+* [How can a red team help risk measurement?  ](#how-can-a-red-team-help-risk-measurement)
+  * [How did we use forecasting to measure uncertainty?  ](#how-did-we-use-forecasting-to-measure-uncertainty)
+  * [What does it look like in practice?  ](#what-does-it-look-like-in-practice)
+     * [Step 1: Take the predictions  ](#step-1-take-the-predictions)
+        * [Scenario 1 Round 1  ](#scenario-1-round-1)
+        * [Scenario 2 Round 1  ](#scenario-2-round-1)
+        * [Forecast Prediction Summary  ](#forecast-prediction-summary)
+     * [Step 2: Execute operations or wait for scenarios to occur/timeout ](#step-2-execute-operations-or-wait-for-scenarios-to-occur-timeout)
+    * [Step 3: Conclude and score forecasts  ](#step-3-conclude-and-score-forecasts)
+    * [Learning Points: Scenario Design  ](#learning-points-scenario-design)
+  * [How do you measure improvement over time?  ](#how-do-you-measure-improvement-over-time)
+    * [Step 4: Implement improvements and new controls  ](#step-4-implement-improvements-and-new-controls)
+    * [Step 5: Forecast again  ](#step-5-forecast-again)
+        * [Scenario 1 Round 2  ](#scenario-1-round-2)
+        * [Visualizing the prediction  ](#visualizing-the-prediction)
+        * [Scenario 2 Round 2  ](#scenario-2-round-2)
+        * [Visualizing the prediction  ](#visualizing-the-prediction)
+    * [Step 6: Calculate Accuracy  ](#step-6-calculate-accuracy)
+    * [Learning Points: Accuracy  ](#learning-points-accuracy)
+  * [Conclusion  ](#conclusion)
 
   
 
