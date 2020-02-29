@@ -42,7 +42,7 @@ Forecasting utilizes the findings of red team exercises as data points to inform
 
 ## How did we use forecasting to measure uncertainty?
 
-In 2019 I published a list of 20 scenarios my panel of forecasters made predictions about for the upcoming 12 months. The forecasters are given training, are calibrated, and use their diverse knowledge of the workings of the organization to discuss each scenario and then estimate the likelihood of those events occurring. This experiment had the goal to reduce [uncertainty](https://magoo.github.io/simple-risk-analysis/) about the chances of these events occurring and therefore have a better understanding of the security posture of the company.
+In 2019 I published a [list of 20 scenarios my](https://wardolphin.party/2019/02/27/Red-Team-Forecasting-Scenarios.html) panel of forecasters made predictions about for the upcoming 12 months. The forecasters are given training, are calibrated, and use their diverse knowledge of the workings of the organization to discuss each scenario and then estimate the likelihood of those events occurring. This experiment had the goal to reduce [uncertainty](https://magoo.github.io/simple-risk-analysis/) about the chances of these events occurring and therefore have a better understanding of the security posture of the company.
 
   
 
