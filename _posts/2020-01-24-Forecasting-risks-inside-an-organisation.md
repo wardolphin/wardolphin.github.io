@@ -295,7 +295,7 @@ Due to poor scenario selection and spreadsheet update exhaustion, I wasn’t abl
 
 ## Conclusion
 
-I went in search of a better way to measure cyber risk in an organization. There is a never-ending debate on whether or not quantitative measure are “better” than qualitative when it comes to enumerating risk at a high level, but I do believe that having statistical data with percentages, numbers that can be measured, and the ability to track if predictions are correct or not is a large step in the right direction away from relying on one person's estimate of “high, medium or low” for example.
+I went in search of a better way to measure cyber risk in an organization. There is a never-ending debate on whether or not quantitative measures are “better” than qualitative when it comes to enumerating risk at a high level. As a friend pointed out, trying to put a qualitative label on a quantitative testing program is an oxymoron in itself. What I can say is that quantitative methods like forecasting have the advantages of having statistical data with percentages, numbers that can be measured accurately, and the ability to track if predictions are correct or not. These are significant improvements from relying on a single person's estimate of “high, medium or low” as an indicator of risk in the enterprise.
 
   
 
