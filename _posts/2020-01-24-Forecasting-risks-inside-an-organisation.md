@@ -26,7 +26,7 @@ title: Forecasting Risk inside an Organization
 
   
 
-From 2018-2019 I experimented with using forecasting for measuring the effectiveness of red team operations inside Atlassian. I’m publishing my research  so that others can benefit from the effort I put into doing this and see the learnings, failures and successes of the methodology. I am not an expert in statistics, so becoming a subjective bayesian and navigating the challenges, contradictions and uncertainty (lol) in a discipline outside of my normal expertise was no easy task. That being said, I really do believe methodologies like this will have a place in risk measurement in security in the next few years, and can be combined with red team exercises or other external validation sources such as bug bounty. I hope this blog helps someone navigate their entry into this topic.
+From 2018-2019 I experimented with using forecasting for measuring the effectiveness of red team operations inside Atlassian. I’m publishing my research so that others can benefit from the effort I put into doing this and see the learnings, failures and successes of the methodology. I am not an expert in statistics, so becoming a subjective bayesian and navigating the challenges, contradictions and uncertainty (lol) in a discipline outside of my normal expertise was no easy task. That being said, I believe methodologies like this will have a place in risk measurement in information security in the next few years and can be combined with red team exercises or other external validation sources such as bug bounty. I hope this blog helps someone navigate their entry into this topic.
 
   
 
@@ -50,9 +50,9 @@ At the time I originally wrote this article the forecasters had only done two fo
 
   
 
-Being able to measure the *accuracy* of your prediction team is a key benefit of forecasting. You are not simply guessing whether an action will happen and then not measuring (or not being able to measure) if you were correct as is the case in the traditional risk matrix approach. In our methodology each prediction will be concluded as correct or incorrect at the end of the time period (in our case 12 months, or as soon as the outcome occurs) and their prediction accuracy scored using the Brier Score formula. If, after a period of learning/induction training our forecasters are not showing reasonably accurate results, then they should be removed from the program. If they are predicting events accurately, we know that we have accurate predictions of risk!
+Being able to measure the *accuracy* of your prediction team is a key benefit of forecasting when compared to a traditional risk matrix approach. In our methodology each prediction will be concluded as correct or incorrect at the end of the period (in our case 12 months, or as soon as the outcome occurs) and prediction accuracy scored using the [Brier Score](https://en.wikipedia.org/wiki/Brier_score) formula. If, after a period of learning/induction training our forecasters are showing accurate results, we know that we have accurate predictions of risk! If they are inaccurate in their predictions we might want to consider why that might be. What might be influencing their beliefs, do they need extra or improved training or are there underlying issues that aren't transparent?
 
-  
+
 
 ## What does it look like in practice?
 
@@ -68,7 +68,7 @@ Eight people from different departments in security, operations, and compliance 
 
 #### Scenario 1 Round 1
 
-In the next 12 months, during the course of a red team operation, the red team:
+In the next 12 months, during a red team operation, the red team:
 
 1.  compromised one or more employee assigned computers
     
@@ -117,13 +117,13 @@ The forecast shows that the group believes that there is an 89% chance that duri
 
 ### Step 2: Execute operations or wait for scenarios to occur/timeout
 
-Next, the security team plans a red team operation attempting a breach involving an external compromise with an attempt at installing malware on and controlling an employees computer. The red team attempts their operation and succeeds in their end goal without being detected, installing and maintaining malware on several employee laptops during the course of the operation. They continue to maintain access to the network and make sure they are accessing target systems for 7 days, giving a chance for detection by the blue team. They then initiate one of the Game Moderator’s (GM) planned incident response trigger scenarios, so that the blue team can start investigating a potential incident and discover what has happened.
+Next, the security team plans a red team operation attempting a breach involving an external compromise with an attempt at installing malware on and controlling an employee's computer. The red team attempts their operation and succeeds in their end goal without being detected, installing and maintaining malware on several employee laptops during the operation. They continue to maintain access to the network and make sure they are accessing target systems for 7 days, giving a chance for detection by the blue team. They then initiate one of the Game Moderator’s (GM) planned incident response trigger scenarios so that the blue team can start investigating a potential incident and discover what has happened.
 
-  
+> **_NOTE:_** For purposes of these examples it should be assumed that all red team operations are planned and executed with the goals of the defensive security team (which can vary wildly based on the organization) as the first concern. This isn't a post about how to run red team operations or why they should be run one way or another.  
 
 ### Step 3: Conclude and score forecasts
 
-Because the scenarios that were forecasted have met one of the possible outcomes, we can conclude them and calculate the panelists accuracy. To do this we calculate the Brier* score. Brier scores range from 0 being the best possible score and 2 being the worst.
+Because the scenarios that were forecasted have met one of the possible outcomes, we can conclude them and calculate the panelists' accuracy. To do this we calculate the Brier* score. Brier scores range from 0 being the best possible score and 2 being the worst.
 
   
 
@@ -131,7 +131,7 @@ Because the scenarios that were forecasted have met one of the possible outcomes
 
   
 
-In the first scenario the red team did compromise employee computers. So option A is the final outcome and is coded as 1. In the second scenario the computer compromises remained undetected for more than 7 days, so option C is the final outcome, coded as 1.
+In the first scenario the red team did compromise employee computers. So option A is the outcome and is coded as 1. In the second scenario the computer compromises remained undetected for more than 7 days, so option C is the outcome, coded as 1.
 
   
 | Scenario           | A (compromise occurs)     | B (no compromise) |
@@ -158,15 +158,21 @@ Brier score calculation:
 
   
 
-In terms of the first scenario, the panelists were fairly accurate in predicting the outcome. Also, both of our predictions show that panelists already have a better idea than the baseline of total uncertainty about the scenarios. Total uncertainty would be 50% for each outcome in scenario 1 and 33% for each outcome in scenario 2. But where do we go from here?
+So what do these Brier Scores tell us? I hesitate to say this is an accurate or good prediction, even though the panelists appear to be close to correct in the first scenario. 
+
+
+This is because we don't yet know what a *good* Brier score is for each scenario. An accurate Brier Score will become more apparent after several scenarios are gathered and you can determine approximately what range should be expected for each.
+
+
+What we can see though is that for both of our predictions panelists already have a better idea than the baseline of total uncertainty about the scenarios. Total uncertainty would be 50% for each outcome in scenario 1 and 33% for each outcome in scenario 2. But where do we go from here?
 
 #### Learning Points: Scenario Design
 
-I’m going to say that these scenarios are actually not ideal for using in this exercise (and this is one of the learnings I made during this experiment). This is because when designing a scenario all potential outcomes for that scenario must be accounted for. In the detection scenario, many other things could happen that might not be covered with an automated detection in the time frame given. For example an employee reports a phishing email after the compromise, while the red team is still operating, concluding the test early and not giving time for detection alerts to fire on further activity.
+I’m going to say that these scenarios are not ideal for use in this exercise. This is because when designing a scenario all potential outcomes for that scenario must be accounted for. In the detection scenario, many other things could happen that might not be covered with an automated detection in the time frame given. For example an employee reports a phishing email after the compromise, while the red team is still operating, concluding the test early and not giving time for detection alerts to fire on further activity.
 
   
 
-Additionally, over the course of many rounds of forecasting I leaned towards only detection scenarios when relating to red team or penetration testing. The objectives of my team changed fairly often as we try different types of attacks and use different tactics. It was extremely difficult to come up with adequate scenarios when it relates to the red team achieving something, or how they will be detected. I’d love to know your scenarios and if you have any that have worked well over extended periods of time!
+Additionally, after many rounds of forecasting I leaned towards only detection (as opposed to prevention) scenarios occurring from red team exercises or penetration testing. The objectives of my team changed fairly often as we try different types of attacks and use different tactics. It was extremely difficult to come up with adequate scenarios when it relates to the red team achieving something, or how they will be detected. I’d love to know your scenarios and if you have any that have worked well over extended periods!
 
 ## How do you measure improvement over time?
 
@@ -174,11 +180,11 @@ So now that the first forecast is complete, you might be wondering what potentia
 
 ### Step 4: Implement improvements and new controls
 
-Post red team exercise, the red team sits down with the blue team and helps them understand all the actions that occurred during the exercise. The blue team comes up with several large projects that need to be implemented company wide to lower the chance of this being able to happen again, and many ideas for detections and alerts that they can implement based on the techniques used by the red team. Is that the end of the story? Not at all. We really want to know if the fixes that are planned are going to impact the chances of these attacks being done in the future.
+Post red team exercise, the red team sits down with the blue team and helps them understand all the actions that occurred during the exercise. The blue team comes up with several large projects that need to be implemented company-wide to lower the chance of this being able to happen again, and many ideas for detections and alerts that they can implement based on the techniques used by the red team. Is that the end of the story? Not at all. We want to know if the fixes that are planned are going to impact the chances of these attacks being done in the future.
 
   
 
-You might even have an ideal end state in mind, a certain percentage or level or risk that you would like the team to reach in the future. That’s fine and could even be a goal or metric that is tracked and worked towards. In this example I’ve added some hypothetical 1 year goals, just to add some more data to the visualizations and suggest an idea of how this information could be used to set goals for a team.
+You might even have an ideal end state in mind, a certain percentage or level of risk that you would like the team to reach in the future. That’s fine and could even be a goal or metric that is tracked and worked towards. In this example I’ve added some hypothetical 1-year goals, just to add some more data to the visualizations and suggest an idea of how this information could be used to set goals for a team.
 
 ### Step 5: Forecast again
 
@@ -186,11 +192,11 @@ It's time for the next quarterly forecast. All the panelists are brought togethe
 
   
 
-The IT manager discusses one of the large scale preventative projects has been rolled out to 50% of corporate systems. They believe this will lower the chance of an endpoint compromise. The compliance manager mentions that monthly audits are now automated to check if any unknown accounts are added to the company domain, and believes this may slightly increase detection chances. The offensive operations manager highlights that the company has decided to bring in an external consultancy to supplement additional red team exercises for the next 6 months, and thinks that the new ideas the external group will bring may increase chances of compromise, but also thinks their use of generic tooling and malware may increase chances of detection.
+The IT manager discusses one of the large scale preventative projects that has been rolled out to 50% of corporate systems. They believe this will lower the chance of an endpoint compromise. The compliance manager mentions that monthly audits are now automated to check if any unknown accounts are added to the company domain, and believes this may slightly increase detection chances. The offensive operations manager highlights that the company has decided to bring in an external consultancy to supplement additional red team exercises for the next 6 months, and thinks that the new ideas the external group will bring may increase chances of compromise, but also thinks their use of generic tooling and malware may increase chances of detection.
 
   
 
-The group then makes their individual forecasts and here are the numbers.
+The group then makes their forecasts and here are the numbers.
 
 #### Scenario 1 Round 2
 
@@ -213,7 +219,7 @@ The group then makes their individual forecasts and here are the numbers.
  
   
 
-The number hasn’t really moved too much in terms of what the panel believes will happen in the next 12 months.
+The number hasn’t moved too much in terms of what the panel believes will happen in the next 12 months.
 
 #### Scenario 2 Round 2
 
@@ -245,7 +251,7 @@ It might not seem it, but this is good! Why? This is an important point to grasp
 
   
 
-At the beginning of this unholy long blog post I mentioned the goal of this experiment was to “reduce uncertainty”. This means that we don’t really mind whether the forecast for the scenario moves in a “bad” direction.
+At the beginning of this unholy long blog post I mentioned the goal of this experiment was to “reduce uncertainty”. This means that we don’t mind whether the forecast for the scenario moves in a “bad” direction.
 
   
 
@@ -255,15 +261,15 @@ To further elaborate, think about the following situation.
 
 Scenario: An AWS key is used by an attacker to access Company data.
 
-Say that the last quarter the forecasters put this at 50% chance of happening. An incident has occurred since then, and the outcome was that this happened. The new forecast is taken and the panel judges the likelihood at 80% now. This looks “bad” right?
+Say that the last quarter the forecasters put this at a 50% chance of happening. An incident has occurred since then, and the outcome was that this happened. The new forecast is taken and the panel judges the likelihood at 80% now. This looks “bad” right?
 
   
 
-The panelists are actually a lot more certain about the chance of this happening now, assuming they are generally well calibrated and are forecasting effectively and have low brier scores. This is how an outcome that isn’t moving in the direction wanted is actually ‘good’. They are more certain about the security posture than previously.
+The panelists are a lot more certain about the chance of this happening now, assuming they are generally well-calibrated and are forecasting effectively and have low brier scores. This is how an outcome that isn’t moving in the direction wanted is ‘good’. They are more certain about the security posture than previously.
 
   
 
-So for the second scenario, even though it isn’t moving towards the end “goal” yet, the chance of this event occurring has definitely moved in a direction that shows the company that if they want to move towards a 60% chance of detection they will need to significantly invest in their detection capabilities.
+So for the second scenario, even though it isn’t moving towards the end “goal” yet, the chance of this event occurring has moved in a direction that shows the company that if they want to move towards a 60% chance of detection they will need to significantly invest in their detection capabilities.
 
   
 
@@ -273,7 +279,7 @@ These numbers don’t mean anything if red team activities are not regularly und
 
   
 
-You won’t know what a *good* Brier score is for each scenario, this will become more evident as time goes on. This happens after a number of Brier scores have been gathered and you can determine approximately what range should be expected for the scenario in question.
+You won’t know what a *good* Brier score is for each scenario, this will become more evident as time goes on. This happens after several Brier scores have been gathered and you can determine approximately what range should be expected for the scenario in question.
 
   
 
@@ -289,9 +295,9 @@ Due to poor scenario selection and spreadsheet update exhaustion, I wasn’t abl
 
 ## Conclusion
 
-I went in search of a better way to measure cyber risk in an organization. There is a never ending debate on whether or not quantitative measure are “better” than qualitative when it comes to enumerating risk at a high level, but I do believe that having statistical data with percentages, numbers that can be measured, and the ability to track if predictions are correct or not is a large step in the right direction away from relying on one persons estimate of “high, medium or low” for example.
+I went in search of a better way to measure cyber risk in an organization. There is a never-ending debate on whether or not quantitative measure are “better” than qualitative when it comes to enumerating risk at a high level, but I do believe that having statistical data with percentages, numbers that can be measured, and the ability to track if predictions are correct or not is a large step in the right direction away from relying on one person's estimate of “high, medium or low” for example.
 
   
 
-If a better system or application existed to make this framework simple to track over time, then I can most likely say I would still be tracking various scenarios as it relates to not only red team activities but bug bounty findings, real incidents, and anything and everything in between. I think right now it's only available by paying consulting companies. But it is totally do-able and if you want to try it yourself, I hope this post and my mistakes are helpful to your mission.
+If a better system or application existed to make this framework simple to track over time, then I can most likely say I would still be tracking various scenarios as it relates to not only red team activities but bug bounty findings, real incidents, and anything and everything in between. I think right now it's only available by paying consulting companies. But it is do-able and if you want to try it yourself, I hope this post and my mistakes are helpful to your mission.
 
