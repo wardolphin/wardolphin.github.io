@@ -2,7 +2,6 @@
 layout: post
 title: Stealing Encrypted AWS RDS Databases
 --- 
-# Stealing Encrypted AWS RDS Databases 
  
 This post is about techniques to transfer databases between AWS accounts for penetration testing purposes.
  
