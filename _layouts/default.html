@@ -18,6 +18,7 @@
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: "Wardolphin's Blog" }}</a></h1>
+        <link rel="alternate" type="application/atom+xml" title="Wardolphin's Blog" href="/feed.xml">
         
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
