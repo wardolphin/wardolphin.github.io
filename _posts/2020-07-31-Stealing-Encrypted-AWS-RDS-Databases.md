@@ -13,7 +13,7 @@ This takes about 4 clicks and will give you a full copy of the entire database t
  
 To see how to share an RDS snapshot to an external account follow steps [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ShareSnapshot.html).
  
-What happens when you find yourself in a situation with a high privileged AWS user account and AWS console access but the database is encrypted? As outlined above you can prepare for the transfer of an unencrypted DB fairly quickly, but things get complicated when encryption is involved. You might assume what I think most people assume, that encryption is adequate protection against stealing the DB via transfer. I have found however, with some desperation and intense documentation reading, an alternative solution was found.
+What happens when you find yourself in a situation with a high privileged AWS user account and AWS console access but the database is encrypted? As outlined above you can prepare for the transfer of an unencrypted DB fairly quickly, but things get complicated when encryption is involved. You might assume what I think most people assume, that encryption is adequate protection against stealing the DB via transfer. However, with some time pressure, desperation, and intense documentation reading an alternative solution has been found.
  
 # Background
 ## KMS Keys keys kEyS
