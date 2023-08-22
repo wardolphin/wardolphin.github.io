@@ -14,3 +14,7 @@ description: https://wardolphin.party/blog/
 {% if page.tags %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endif %}
+
+{% if page.comments_id %}
+  {% include comments.html issue_id=page.comments_id %}
+{% endif %}
