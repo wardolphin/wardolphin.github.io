@@ -1,9 +1,12 @@
 ---
 layout: post
 title:  "I am the Dream Seer"
+comments_id: 1
 ---
 
 I am Brianna I am the Dream Seer
+
+
 I witness your dreams
 
 
@@ -15,7 +18,7 @@ What lives deep down inside you? What is the tiny spark that yearns to be fanned
 
 My dreams command the utmost respect, for they are me. Your dreams deserve the light of witnessing. Come forth and let them SHINE.
 
-##FAQ
+## FAQ
 
 ### What if I don't have any dreams?
 
