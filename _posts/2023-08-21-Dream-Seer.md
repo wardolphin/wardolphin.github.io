@@ -29,3 +29,7 @@ Close your eyes, and let something come to mind.
 ### What if I have LOTS of dreams?
 
 Please tell me as many as you feel comfortable.
+
+### How do I tell you my dreams?
+
+Put them in the comments below!
