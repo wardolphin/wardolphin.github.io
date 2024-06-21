@@ -13,7 +13,9 @@ So in the end, the companies taking money from users are just using the same bro
 
 ## It's probably my naivety
 
-I didn't spend much time software engineering before this year. All my projects were custom for red team hacks, all cobbled together in the heat of trying to extract some precious data from the innards of some bloated prod environment and route it through some obscure tunnel so it wouldn't be seen. It's terrible code, and it sure isn't software engineering. But it's creative, and gets the job done.  
+Prior to this year most of my development projects were custom for red team hacks, all cobbled together in the heat of trying to extract some precious data from the innards of some bloated prod environment and route it through some obscure tunnel so it wouldn't be seen. The code was creative and it got the job done, but it sure wasn't was I envision when I think of 'software engineering'. 
+
+Although there was that one time I wrote malware in java. Malware is really just software the user gets, worry free. It has to be extremely reliable, robust, and self-diagnostic because the user won't try to fix it if it stops running. 
 
 So my experience using open source repos to actually build code that will reliably and repeatedly do the *thing* for hopefully me and anyone else who uses it is minimal.
 
